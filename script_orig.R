@@ -1,5 +1,3 @@
-##PRODUTO 1##
-
 install.packages("tidyr")
 
 library(data.table)
