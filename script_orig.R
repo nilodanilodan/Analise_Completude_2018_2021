@@ -55,15 +55,6 @@ mget(ls(pattern = "^subset_\\d{4}_.*")) %>%
          mutate(ANO = str_extract(.y, "\\d{4}"))) %>%
   list2env(.GlobalEnv)
 
-subset_2018_empenhada$ANO <- 2018
-subset_2018_liquidada$ANO <- 2018
-subset_2019_empenhada$ANO <- 2019
-subset_2019_liquidada$ANO <- 2019
-subset_2020_empenhada$ANO <- 2020
-subset_2020_liquidada$ANO <- 2020
-subset_2021_empenhada$ANO <- 2021
-subset_2021_liquidada$ANO <- 2021
-
 #juntando os df em apenas 2
 empenhada <- bind_rows(subset_2018_empenhada, subset_2019_empenhada, subset_2020_empenhada, subset_2021_empenhada)
 liquidada <- bind_rows(subset_2018_liquidada, subset_2019_liquidada, subset_2020_liquidada, subset_2021_liquidada)
